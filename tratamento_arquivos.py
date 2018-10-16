@@ -2,6 +2,7 @@
 ### w = subescreve
 ### a = adiciona a ultima linha
 ### x = se o arquivo ja existe da erro
+### r = leitura
 ##### exmplo 1 tipo log
 try:
 	with open ('file01',x) as f:
@@ -14,3 +15,9 @@ except FileExistsError as e:
 f = open('teste.txt', 'w')
 f.white('curso python')
 f.close()
+
+####Leitura de arquivo
+with open('file01','r') as f:
+	print(f.read())
+	b = f.readlines()
+	print (b[0] + b[3] + b[6] + '\n' )
