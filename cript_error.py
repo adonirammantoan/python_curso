@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-
 import sys 
 alfabeto = 'abcdefghijklmnopqrstuvwyxz'
 chave = 3
-
 def cript(mensagem):
 	novo = ''
 	for c in mensagem:
@@ -32,9 +30,11 @@ def main():
 #		decript(mensagem)
 #	else:
 #		print ('comando invalido')
-
-	opcoes = {'cript': cript, 'decript': decript}
-	opcoes [comando](mensagem)
+	try:	
+		opcoes = {'cript': cript, 'decript': decript}
+		opcoes [comando](mensagem)
+	except  Exception as e:
+		print ('comando invalidos')
 
 if __name__=='__main__':
 	main()
